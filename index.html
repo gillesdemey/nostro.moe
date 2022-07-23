@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nostromo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600|Inter:100&display=block&subset=Latin">
+  <style>
+    /*
+      Josh's Custom CSS Reset
+      https://www.joshwcomeau.com/css/custom-css-reset/
+    */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    * {
+      margin: 0;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, picture, video, canvas, svg {
+      display: block;
+      max-width: 100%;
+    }
+    input, button, textarea, select {
+      font: inherit;
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+      overflow-wrap: break-word;
+    }
+    body {
+      background-image: linear-gradient(45deg, #ff9a9e 0%, hsl(13, 84%, 87%) 99%, #fad0c4 100%);
+    }
+    h1, p {
+      color: #330867;
+    }
+    header {
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+    }
+    header h1, header h2 {
+      line-height: 1em;
+    }
+    header h1 {
+      /* font-size: 12vw; */
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      fill: #330867;
+    }
+    header h2 {
+      font-family: "Inter", sans-serif;
+      font-weight: 100;
+      color: black;
+    }
+    article {
+      width: 70%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    article p {
+      font-family: "Playfair Display", serif;
+      width: 60vw;
+      font-size: 2vw;
+      font-weight: 400;
+    }
+    footer {
+      margin-top: 5rem;
+      display: flex;
+      column-gap: 1em;
+    }
+    footer a {
+      font-size: 1.5vw;
+      font-family: "Playfair Display", serif;
+      border:#330867 solid 2px;
+      padding: 0.2em 0.6em;
+      color: #330867;
+      text-decoration: none;
+      box-shadow: 5px 5px #330867;
+    }
+    footer a:hover {
+      background-color: #330867;
+      color: hsl(13, 84%, 87%);
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <header>
+      <h1>
+        <svg viewBox="0 0 140 20">
+          <text x="0" y="18">Nostromo</text>
+        </svg>
+      </h1>
+      <h2>
+        <svg viewBox="0 0 300 25">
+          <text x="0" y="20">Building excellent software</text>
+        </svg>
+      </h2>
+    </header>
+    <p>
+      Hi, I'm Gilles.
+      <br /><br />
+      I've been building software for over a decade.<br />
+      I'm currently expressing my passion at <strong>Grafana Labs</strong>.
+    </p>
+    <footer>
+      <a href="https://demey.io/">Blog</a>
+      <a href="https://github.com/gillesdemey">GitHub</a>
+      <a href="https://twitter.com/gdemey">Twitter</a>
+      <a href="https://www.linkedin.com/in/gillesdemey/">LinkedIn</a>
+    </footer>
+  </article>
+</body>
+</html>
