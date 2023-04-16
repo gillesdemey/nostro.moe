@@ -93,18 +93,23 @@
     }
 
     article {
-      width: 70%;
+      width: 85%;
       max-width: 800px;
       margin: auto auto;
 
       display: flex;
       flex-direction: column;
-      gap: 5em;
+      gap: min(7vh, 5em);
+    }
+
+    @media screen and (min-width: 600px) {
+      article {
+        width: 70%;
+      }
     }
 
     article p {
       font-family: "Playfair Display", serif;
-      width: 60vw;
       font-size: 160%;
       font-weight: 400;
     }
@@ -137,7 +142,7 @@
   <article>
     <header>
       <h1>
-        <svg viewBox="0 0 175 25">
+        <svg viewBox="0 0 170 25">
           <text x="0" y="23">Nostromo</text>
         </svg>
       </h1>
