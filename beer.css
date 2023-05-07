@@ -1,0 +1,85 @@
+body * {
+  box-sizing: content-box;
+}
+
+body {
+  display: flex;
+  position: absolute;
+
+  align-items: center;
+  align-content: center;
+
+  height: 100%;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: black;
+}
+
+.pirata {
+  font-family: 'Pirata One', cursive;
+}
+
+.brandname {
+  font-size: 20mm;
+
+  transform: rotate(-90deg) translateX(-20mm) translateY(-20mm);
+  left: 5mm;
+  top: 10mm;
+}
+
+.exclusive {
+  color: white;
+  mix-blend-mode: exclusion;
+}
+
+.artwork {
+  background-repeat: no-repeat;
+  mix-blend-mode: luminosity;
+  opacity: 35%;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.artwork.hersinde {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/b/b6/Reineke_00_ATitel.jpg");
+  background-size: 150%;
+  background-position: 50% 65%;
+}
+
+div.label {
+  margin: auto;
+
+  width: 205mm;
+  height: 90mm;
+
+  background: #08424F;
+
+  display: flex;
+  flex-direction: row;
+}
+
+aside.ingredients, aside.story, main {
+  height: 100%;
+}
+
+aside.ingredients {
+  width: 40mm;
+}
+
+aside.story {
+  width: 50mm;
+}
+
+main {
+  flex: 1;
+  position: relative;
+}
+
+main > * {
+  position: absolute;
+}
