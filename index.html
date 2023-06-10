@@ -6,12 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nostromo | Building excellent software</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600|Inter:100&display=block&subset=Latin">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Darker+Grotesque&family=Kenia&display=swap"
+    rel="stylesheet">
+
   <meta name="theme-color" content="#fad0c4">
   <style>
+    /* variables */
+    :root {
+      --header-font-family: 'Kenia', sans-serif;
+      --subheader-font-family: 'Darker Grotesque', serif;
+      --body-font-family: 'Bodoni Moda', serif;
+      --bg-color: #000000;
+      --text-color: #ffffff;
+    }
+
     /*
       Josh's Custom CSS Reset
       https://www.joshwcomeau.com/css/custom-css-reset/
@@ -64,12 +75,12 @@
 
     body {
       display: flex;
-      background: #fad0c4;
+      background: var(--bg-color);
     }
 
     h1,
     p {
-      color: #330867;
+      color: var(--text-color);
     }
 
     header {}
@@ -80,15 +91,12 @@
     }
 
     header h1 {
-      font-family: "Playfair Display", serif;
-      font-weight: 600;
+      font-family: var(--header-font-family);
       text-transform: uppercase;
-      fill: #330867;
     }
 
     header h2 {
-      font-family: "Inter", sans-serif;
-      font-weight: 100;
+      font-family: var(--subheader-font-family);
       color: black;
     }
 
@@ -109,9 +117,8 @@
     }
 
     article p {
-      font-family: "Playfair Display", serif;
+      font-family: var(--body-font-family);
       font-size: 160%;
-      font-weight: 400;
     }
 
     footer {
@@ -122,17 +129,17 @@
 
     footer a {
       font-size: 120%;
-      font-family: "Playfair Display", serif;
-      border: #330867 solid 2px;
+      font-family: var(--body-font-family);
+      border: white solid 2px;
       padding: 0.2em 0.6em;
-      color: #330867;
+      color: var(--text-color);
       text-decoration: none;
-      box-shadow: 5px 5px #330867;
+      box-shadow: 5px 5px white;
     }
 
     footer a:hover {
-      background-color: #330867;
-      color: hsl(13, 84%, 87%);
+      background-color: var(--text-color);
+      color: var(--bg-color);
     }
 
   </style>
@@ -141,14 +148,34 @@
 <body>
   <article>
     <header>
-      <h1>
-        <svg viewBox="0 0 170 25">
-          <text x="0" y="23">Nostromo</text>
-        </svg>
-      </h1>
+      <div style="position: relative; height: 120px;">
+
+        <!-- red -->
+        <h1 style="position: absolute; width: 100%; mix-blend-mode: lighten;">
+          <svg viewBox="0 0 170 25">
+            <text x="0" y="23" fill="#FF0000">Nostromo</text>
+          </svg>
+        </h1>
+
+        <!-- green -->
+        <h1
+          style="position: absolute; width: 100%; mix-blend-mode: lighten; transform: translateX(-3px) translateY(3px);">
+          <svg viewBox="0 0 170 25">
+            <text x="0" y="23" fill="#00FF00">Nostromo</text>
+          </svg>
+        </h1>
+
+        <!-- blue -->
+        <h1
+          style="position: absolute; width: 100%; mix-blend-mode: lighten; transform: translateX(-6px) translateY(6px);">
+          <svg viewBox="0 0 170 25">
+            <text x="0" y="23" fill="#0000FF">Nostromo</text>
+          </svg>
+        </h1>
+      </div>
       <h2>
         <svg viewBox="0 0 300 35">
-          <text x="0" y="25">Building cool sh*t</text>
+          <text x="0" y="25" fill="white">Product Engineering</text>
         </svg>
       </h2>
     </header>
