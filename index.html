@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nostromo | Building excellent software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <title>Nostromo | Product Engineer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Darker+Grotesque&family=Kenia&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Kenia&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fitty/2.3.7/fitty.min.js"
+    integrity="sha512-bK3Zz3VXQjmL14Cdas2v8pspGRdEOiJtKraf5We2WJM2uONucd338dsKBhZE6vDjM+j/har4ihdtxbvWd2idcA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <meta name="theme-color" content="#fad0c4">
+  <meta name="theme-color" content="#000">
   <style>
     /* variables */
     :root {
@@ -83,7 +86,9 @@
       color: var(--text-color);
     }
 
-    header {}
+    header {
+      width: 100%;
+    }
 
     header h1,
     header h2 {
@@ -95,11 +100,6 @@
       text-transform: uppercase;
     }
 
-    header h2 {
-      font-family: var(--subheader-font-family);
-      color: black;
-    }
-
     article {
       width: 85%;
       max-width: 800px;
@@ -107,7 +107,7 @@
 
       display: flex;
       flex-direction: column;
-      gap: min(7vh, 5em);
+      gap: 5vh;
     }
 
     @media screen and (min-width: 600px) {
@@ -148,36 +148,24 @@
 <body>
   <article>
     <header>
-      <div style="position: relative; height: 150px;">
-
+      <div style="position: relative; width: 100%;">
         <!-- red -->
-        <h1 style="position: absolute; width: 100%; mix-blend-mode: lighten;">
-          <svg viewBox="0 0 105 25">
-            <text x="0" y="20" fill="#FF0000">Nostromo</text>
-          </svg>
+        <h1 style="mix-blend-mode: lighten; color: #FF0000;">
+          Nostromo
         </h1>
 
         <!-- green -->
         <h1
-          style="position: absolute; width: 100%; mix-blend-mode: lighten; transform: translateX(-1%) translateY(1%);">
-          <svg viewBox="0 0 105 25">
-            <text x="0" y="20" fill="#00FF00">Nostromo</text>
-          </svg>
+          style="mix-blend-mode: lighten; transform: translateX(-1%) translateY(1%); color: #00FF00; position: absolute; top: 0; left: 0;">
+          Nostromo
         </h1>
 
         <!-- blue -->
         <h1
-          style="position: absolute; width: 100%; mix-blend-mode: lighten; transform: translateX(-2%) translateY(2%);">
-          <svg viewBox="0 0 105 25">
-            <text x="0" y="20" fill="#0000FF">Nostromo</text>
-          </svg>
+          style="mix-blend-mode: lighten; transform: translateX(-2%) translateY(2%); color: #0000FF; position: absolute; top: 0; left: 0;">
+          Nostromo
         </h1>
       </div>
-      <h2>
-        <svg viewBox="0 0 190 35">
-          <text x="0" y="25" fill="white">Product Engineer</text>
-        </svg>
-      </h2>
     </header>
     <p>
       Hi, I'm Gilles.
@@ -193,5 +181,8 @@
     </footer>
   </article>
 </body>
+<script>
+  fitty('h1');
+</script>
 
 </html>
