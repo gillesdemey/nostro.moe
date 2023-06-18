@@ -16,160 +16,31 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <meta name="theme-color" content="#000">
-  <style>
-    /* variables */
-    :root {
-      --header-font-family: 'Kenia', sans-serif;
-      --subheader-font-family: 'Darker Grotesque', serif;
-      --body-font-family: 'Bodoni Moda', serif;
-      --bg-color: #000000;
-      --text-color: #ffffff;
-    }
-
-    /*
-      Josh's Custom CSS Reset
-      https://www.joshwcomeau.com/css/custom-css-reset/
-    */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    * {
-      margin: 0;
-    }
-
-    html,
-    body {
-      height: 100%;
-    }
-
-    body {
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img,
-    picture,
-    video,
-    canvas,
-    svg {
-      display: block;
-      max-width: 100%;
-    }
-
-    input,
-    button,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      overflow-wrap: break-word;
-    }
-
-    body {
-      display: flex;
-      background: var(--bg-color);
-    }
-
-    h1,
-    p {
-      color: var(--text-color);
-    }
-
-    header {
-      width: 100%;
-    }
-
-    header h1,
-    header h2 {
-      line-height: 1em;
-    }
-
-    header h1 {
-      font-family: var(--header-font-family);
-      text-transform: uppercase;
-    }
-
-    article {
-      width: 85%;
-      max-width: 800px;
-      margin: auto auto;
-
-      display: flex;
-      flex-direction: column;
-      gap: 5vh;
-    }
-
-    @media screen and (min-width: 600px) {
-      article {
-        width: 70%;
-      }
-    }
-
-    article p {
-      font-family: var(--body-font-family);
-      font-size: 160%;
-    }
-
-    footer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-    }
-
-    footer a {
-      font-size: 120%;
-      font-family: var(--body-font-family);
-      border: white solid 2px;
-      padding: 0.2em 0.6em;
-      color: var(--text-color);
-      text-decoration: none;
-      box-shadow: 5px 5px white;
-    }
-
-    footer a:hover {
-      background-color: var(--text-color);
-      color: var(--bg-color);
-    }
-
-  </style>
+  <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
   <article>
     <header>
-      <div style="position: relative; width: 100%;">
-        <!-- red -->
-        <h1 style="mix-blend-mode: lighten; color: #FF0000;">
-          Nostromo
-        </h1>
+      <!-- red -->
+      <h1 style="color: #FF0000;">
+        Nostromo
+      </h1>
 
-        <!-- green -->
-        <h1
-          style="mix-blend-mode: lighten; transform: translateX(-1%) translateY(1%); color: #00FF00; position: absolute; top: 0; left: 0;">
-          Nostromo
-        </h1>
+      <!-- green -->
+      <h1 style="transform: translateX(-1%) translateY(1%); color: #00FF00;">
+        Nostromo
+      </h1>
 
-        <!-- blue -->
-        <h1
-          style="mix-blend-mode: lighten; transform: translateX(-2%) translateY(2%); color: #0000FF; position: absolute; top: 0; left: 0;">
-          Nostromo
-        </h1>
-      </div>
+      <!-- blue -->
+      <h1 style="transform: translateX(-2%) translateY(2%); color: #0000FF;">
+        Nostromo
+      </h1>
     </header>
     <p>
       Hi, I'm Gilles.
-      <br /><br />
+      <br />
+      <br />
       I've been building software for over a decade.<br />
       I'm currently expressing my passion at <strong>Grafana Labs</strong>.
     </p>
