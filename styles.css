@@ -78,8 +78,8 @@
  }
 
  header h1 {
+   display: none;
    font-family: var(--header-font-family);
-   text-transform: uppercase;
 
    mix-blend-mode: lighten;
  }

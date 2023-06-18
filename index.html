@@ -10,7 +10,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Kenia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap&subset=latin" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kenia&text=NOSTROMO&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fitty/2.3.7/fitty.min.js"
     integrity="sha512-bK3Zz3VXQjmL14Cdas2v8pspGRdEOiJtKraf5We2WJM2uONucd338dsKBhZE6vDjM+j/har4ihdtxbvWd2idcA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -23,18 +24,18 @@
   <article>
     <header>
       <!-- red -->
-      <h1 style="color: #FF0000;">
-        Nostromo
+      <h1 style="color: #FF0000;" class="fit">
+        NOSTROMO
       </h1>
 
       <!-- green -->
-      <h1 style="transform: translateX(-1%) translateY(1%); color: #00FF00;">
-        Nostromo
+      <h1 style="transform: translateX(-1%) translateY(1%); color: #00FF00;" class="fit">
+        NOSTROMO
       </h1>
 
       <!-- blue -->
-      <h1 style="transform: translateX(-2%) translateY(2%); color: #0000FF;">
-        Nostromo
+      <h1 style="transform: translateX(-2%) translateY(2%); color: #0000FF;" class="fit">
+        NOSTROMO
       </h1>
     </header>
     <p>
@@ -53,7 +54,35 @@
   </article>
 </body>
 <script>
-  fitty('h1');
+  fitty('.fit');
+
+  (function () {
+    // called when additional fonts loaded
+    function redrawFitty() {
+      document.documentElement.classList.add('fonts-loaded');
+      fitty.fitAll();
+    }
+
+    // CSS Font Loading API
+    function native() {
+      // this URL will only load the "NOSTRM" characters – really fast!
+      var fontKenia = new FontFace('Kenia', 'url(https://fonts.gstatic.com/l/font?kit=jizURE5PuHQH9qCLNUeswNuLZXtXqWFn&skey=4963fd4437f2b5f&v=v24)', {
+        style: 'normal',
+        weight: '400',
+        display: 'swap'
+      });
+      document.fonts.add(fontKenia);
+      fontKenia.load();
+
+      // if all fonts loaded redraw fitty
+      document.fonts.ready.then(redrawFitty);
+    }
+
+    // Does the current browser support the CSS Font Loading API?
+    if ('fonts' in document) {
+      native();
+    }
+  })();
 </script>
 
 </html>
