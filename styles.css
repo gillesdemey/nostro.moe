@@ -1,16 +1,15 @@
  /* variables */
  :root {
-   --header-font-family: 'Kenia', sans-serif;
-   --subheader-font-family: 'Darker Grotesque', serif;
-   --body-font-family: 'Bodoni Moda', serif;
-   --bg-color: #000000;
+   --header-font-family: 'Darker Grotesque', sans-serif;
+   --body-font-family: 'Darker Grotesque', sans-serif;
+   --bg-color: #000;
    --text-color: #ffffff;
  }
 
  /*
-   Josh's Custom CSS Reset
-   https://www.joshwcomeau.com/css/custom-css-reset/
- */
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
  *,
  *::before,
  *::after {
@@ -70,25 +69,22 @@
  header {
    width: 100%;
    position: relative;
- }
 
- header h1,
- header h2 {
-   line-height: 1em;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+
+   gap: 2em;
  }
 
  header h1 {
-   display: none;
+   position: relative;
    font-family: var(--header-font-family);
-
+   font-size: 6em;
+   line-height: 1em;
+   margin-top: -0.33em;
+   font-weight: 400;
    mix-blend-mode: lighten;
- }
-
- header h1:not(:first-of-type) {
-   position: absolute;
-
-   top: 0;
-   left: 0;
  }
 
  article {
@@ -109,7 +105,9 @@
 
  article p {
    font-family: var(--body-font-family);
-   font-size: 160%;
+   font-size: 2em;
+   line-height: 133%;
+   font-weight: 400;
  }
 
  footer {
@@ -119,8 +117,11 @@
  }
 
  footer a {
-   font-size: 120%;
+   font-size: 133%;
+   line-height: 120%;
+   font-weight: 600;
    font-family: var(--body-font-family);
+
    border: white solid 2px;
    padding: 0.2em 0.6em;
    color: var(--text-color);
